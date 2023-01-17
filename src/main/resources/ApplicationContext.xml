@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:aop="http://www.springframework.org/schema/aop"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd
+    http://www.springframework.org/schema/aop
+    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+    ">
+  <bean id="product1" class="ua.ithillel.lms.model.Product">
+    <constructor-arg>
+      <value>1</value>
+    </constructor-arg>
+    <constructor-arg>
+      <value>Asus</value>
+    </constructor-arg>
+    <constructor-arg>
+      <value>59999.99</value>
+    </constructor-arg>
+  </bean>
+  <bean id="product2" class="ua.ithillel.lms.model.Product">
+    <constructor-arg>
+      <value>2</value>
+    </constructor-arg>
+    <constructor-arg>
+      <value>Acer</value>
+    </constructor-arg>
+    <constructor-arg>
+      <value>49999.99</value>
+    </constructor-arg>
+  </bean>
+  <bean id="product3" class="ua.ithillel.lms.model.Product">
+    <constructor-arg>
+      <value>3</value>
+    </constructor-arg>
+    <constructor-arg>
+      <value>Asus Battery</value>
+    </constructor-arg>
+    <constructor-arg>
+      <value>1700</value>
+    </constructor-arg>
+  </bean>
+  <bean id="product4" class="ua.ithillel.lms.model.Product">
+    <constructor-arg>
+      <value>4</value>
+    </constructor-arg>
+    <constructor-arg>
+      <value>Acer Battery</value>
+    </constructor-arg>
+    <constructor-arg>
+      <value>1500</value>
+    </constructor-arg>
+  </bean>
+  <bean id="product5" class="ua.ithillel.lms.model.Product">
+    <constructor-arg>
+      <value>5</value>
+    </constructor-arg>
+    <constructor-arg>
+      <value>Luxeon UPS</value>
+    </constructor-arg>
+    <constructor-arg>
+      <value>6399.99</value>
+    </constructor-arg>
+  </bean>
+  <bean id="product6" class="ua.ithillel.lms.model.Product">
+    <constructor-arg>
+      <value>6</value>
+    </constructor-arg>
+    <constructor-arg>
+      <value>Luxeon Voltage Corrector</value>
+    </constructor-arg>
+    <constructor-arg>
+      <value>6399.99</value>
+    </constructor-arg>
+  </bean>
+  <bean id="product7" class="ua.ithillel.lms.model.Product">
+    <constructor-arg>
+      <value>7</value>
+    </constructor-arg>
+    <constructor-arg>
+      <value>Samsung air condition</value>
+    </constructor-arg>
+    <constructor-arg>
+      <value>50590.51</value>
+    </constructor-arg>
+  </bean>
+  <bean id="product8" class="ua.ithillel.lms.model.Product">
+    <constructor-arg>
+      <value>8</value>
+    </constructor-arg>
+    <constructor-arg>
+      <value>Samsung refrigerator</value>
+    </constructor-arg>
+    <constructor-arg>
+      <value>63999.99</value>
+    </constructor-arg>
+  </bean>
+
+  <bean id="productRepository" class="ua.ithillel.lms.repository.ProductRepository"
+    autowire="constructor">
+  </bean>
+  <bean id="cart" class="ua.ithillel.lms.service.Cart" scope="prototype" autowire="constructor">
+  </bean>
+</beans>
